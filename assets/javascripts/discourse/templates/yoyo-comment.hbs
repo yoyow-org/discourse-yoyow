@@ -1,0 +1,45 @@
+<div class="yoyo-list">
+  <table>
+    <thead>
+      <tr>
+        <th>{{i18n 'yoyo_comment.content'}}</th>
+        {{!-- <th>{{i18n 'yoyo_comment.poster'}}</th> --}}
+        {{!-- <th>{{i18n 'yoyo_comment.comment'}}</th> --}}
+        <th>{{i18n 'yoyo_comment.points'}}</th>
+        <th>{{i18n 'yoyo_comment.revenue'}}</th>
+        <th>{{i18n 'yoyo_comment.view_in_blockchain'}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model.rows as |item|}}
+      <tr>
+        <td>
+          <a href="{{item.url}}">
+            {{ item.post.title }}
+          </a>
+        </td>
+        <td>
+          {{ item.csaf }}
+        </td>
+        <td>
+          {{ item.profits }}
+        </td>
+        <td class="explorer_url">
+          <a href="{{item.explorerUrl}}" target="_blank">
+            <i class="iconfont iconqianjin"></i>
+          </a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <ul class="pagination">
+    <li class="prev" {{action "changePage" -1}}>
+      <i class="iconfont iconprev"></i>
+    </li>
+    <li class="curr">{{model.pagination.currentPage}}</li>
+    <li class="next" {{action "changePage" 1}}>
+      <i class="iconfont iconnext"></i>
+    </li>
+  </ul>
+</div>

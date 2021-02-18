@@ -1,0 +1,40 @@
+zh_CN:
+  js:
+    retort:
+      title: '选择你的emoji反馈'
+      reactions:
+        one_person:  "%{first}认为"
+        two_people:  "%{first}和%{second}认为"
+        many_people: "%{first}, %{second}, 和其他 %{count} 人认为"
+    yoyo_comment:
+      title: "评价(YOYOW)"
+      content: "内容"
+      poster: "作者"
+      comment: "评价"
+      points: "消耗积分"
+      revenue: "收益(YOYO)"
+      view_in_blockchain: "浏览器查看"
+    yoyo_content:
+      title: "内容(YOYOW)"
+      content: "内容"
+      reactions: "评价数"
+      points: "收到积分"
+      revenue: "收益(YOYO)"
+      view_in_blockchain: "浏览器查看"
+    login:
+      yoyow:
+        name: "YOYOW"
+        title: "YOYOW 登录"
+        message: "使用YOYOW登录"
+    yoyo_settings:
+      title: "YOYOW设置"
+      up_content: "内容上链"
+      up_reaction: "评价上链"
+      points_type: "自定义积分消耗方式"
+      fixed: "固定值"
+      ratio: "固定百分比"
+      points_limit: "单次评价消耗积分上限"
+      up_content_tips: "勾选后，您发布的主题或回复，会被记录在YOYOW链上"
+      up_reaction_tips: "勾选后，您发表指定的评价，在YOYOW链上同步进行对应的操作"
+      fixed_tips: "自定义积分消耗数值"
+      ratio_tips: "自定义积分消耗百分比，请填入100以内的值"

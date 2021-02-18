@@ -1,0 +1,40 @@
+en:
+  js:
+    retort:
+      title: 'Pick your emoji reaction'
+      reactions:
+        one_person:  "%{first} reacted with"
+        two_people:  "%{first} and %{second} reacted with"
+        many_people: "%{first}, %{second}, and %{count} others reacted with"
+    yoyo_comment:
+      title: "Reaction(YOYOW)"
+      content: "Content"
+      poster: "Poster"
+      comment: "Reaction"
+      points: "Points"
+      revenue: "Revenue"
+      view_in_blockchain: "Blockchain View"
+    yoyo_content:
+      title: "Content(YOYOW)"
+      content: "Content"
+      reactions: "Reactions"
+      points: "Points"
+      revenue: "Revenue(YOYO)"
+      view_in_blockchain: "Blockchain View"
+    login:
+      yoyow:
+        name: YOYOW
+        title: with YOYOW
+        message: Log in via YOYOW
+    yoyo_settings:
+      title: "YOYOW Setting"
+      up_content: "Allow content to be blockchained"
+      up_reaction: "Allow reaction to be blockchained"
+      points_type: "Choose the points consumption when reacting"
+      fixed: "Fixed Value"
+      ratio: "Fixed Percentage"
+      points_limit: "Set points consumption limit for a single reaction"
+      up_content_tips: "If checked, the topic or reply you posted will be recorded on the YOYOW blockchain."
+      up_reaction_tips: "If checked，when you post the specified reactions, the corresponding operation will be performed on the YOYOW blockchain."
+      fixed_tips: "Custom points consumption value"
+      ratio_tips: "Custom points consumption percentage, please enter a value within 100"

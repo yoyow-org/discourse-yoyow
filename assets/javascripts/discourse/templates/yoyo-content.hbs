@@ -1,0 +1,49 @@
+<div class="yoyo-list">
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 70%;">{{i18n 'yoyo_content.content'}}</th>
+        {{!-- <th>{{i18n 'yoyo_content.reactions'}}</th> --}}
+        <th>{{i18n 'yoyo_content.points'}}</th>
+        <th>{{i18n 'yoyo_content.revenue'}}</th>
+        <th>{{i18n 'yoyo_content.view_in_blockchain'}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model.rows as |item|}}
+      <tr>
+        <td>
+          <a href="{{item.url}}">
+            {{ item.title }}
+          </a>
+        </td>
+        <td>
+          {{ item.total_score_csaf }}
+        </td>
+        <td>
+          {{ item.poster_awards }}
+        </td>
+        <td class="explorer_url">
+          <a href="{{item.explorerUrl}}" target="_blank">
+            <i class="iconfont iconqianjin"></i>
+          </a>
+        </td>
+      </tr>
+      {{/each }}
+    </tbody>
+  </table>
+  <ul class="pagination">
+    <li class="prev" {{action "changePage" -1}}>
+      <i class="iconfont iconprev"></i>
+    </li>
+    <li class="curr">{{model.pagination.currentPage}}</li>
+    <li class="next" {{action "changePage" 1}}>
+      <i class="iconfont iconnext"></i>
+    </li>
+  </ul>
+</div>
+{{!--
+<a href={{result.userPath}} data-user-card="{{unbound result.username}}">
+  {{avatar result imageSize="large"}}
+</a>
+{{user-stream stream=model}} --}}

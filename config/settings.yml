@@ -1,0 +1,38 @@
+plugins:
+  yoyow_enabled:
+    default: true
+    client: true
+  yoyow_platform_id:
+    default: ''
+  yoyow_middlware_api_url:
+    default: 'http://192.168.0.202:3001/api/v2'
+  yoyow_middleware_sec_key:
+    default: 'thisissec'
+  yoyow_platform_license_lid:
+    default: 1
+  yoyow_score_smile_percent:
+    default: 1
+  yoyow_score_grin_percent:
+    default: 5
+  yoyow_score_laugh_percent:
+    default: 10
+  yoyow_max_score_csaf_once:
+    default: 1000
+  yoyow_content_url_domain_on_chain:
+    default: https://dpos.club
+  yoyow_retort_limited_emoji_set:
+    default: true
+    client: true
+  yoyow_retort_allowed_emojis:
+    default: "yo_smile|yo_grin|yo_laugh|yo_custom"
+    client: true
+  yoyow_retort_allow_multiple_reactions:
+    default: true
+  yoyow_retort_disabled_categories:
+    default: ""
+    client: true
+  yoyow_retort_max_per_day: 50
+  yoyow_retort_tl2_max_per_day_multiplier: 1.5
+  yoyow_retort_tl3_max_per_day_multiplier: 2
+  yoyow_retort_tl4_max_per_day_multiplier: 3
+

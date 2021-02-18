@@ -1,0 +1,72 @@
+{{!-- {{#if is_show_yoyo_setting}} --}}
+<ul class="yoyo-settings">
+  <li class="title">
+    <h2>
+      {{is_show_yoyo_setting}}
+      {{i18n 'yoyo_settings.title'}}
+    </h2>
+  </li>
+  <li>
+    <div class="flex-box">
+      {{input type="checkbox" checked=user.custom_fields.yoyow_post_enabled}}
+      <label>
+        {{i18n 'yoyo_settings.up_content'}}
+      </label>
+      <a class="a_tip" href="https://dpos.club/t/topic/574#1" target="_blank">
+        <i class="iconjieshi iconfont"></i>
+      </a>
+    </div>
+    <p class="tips">
+      {{i18n 'yoyo_settings.up_content_tips'}}
+    </p>
+  </li>
+  <li>
+    <div class="flex-box">
+      {{input type="checkbox" checked=user.custom_fields.yoyow_score_enabled}}
+      <label>
+        {{i18n 'yoyo_settings.up_reaction'}}
+      </label>
+      <a class="a_tip" href="https://dpos.club/t/topic/574#2" target="_blank">
+        <i class="iconjieshi iconfont"></i>
+      </a>
+    </div>
+    <p class="tips">
+      {{i18n 'yoyo_settings.up_reaction_tips'}}
+    </p>
+  </li>
+  <li>
+    <div class="flex-box">
+      <label>
+        {{i18n 'yoyo_settings.points_type'}}
+      </label>
+      <a class="a_tip" href="https://dpos.club/t/topic/574#3" target="_blank">
+        <i class="iconjieshi iconfont"></i>
+      </a>
+    </div>
+    <div class="flex-box">
+      {{combo-box valueAttribute="value"
+                class="score-select"
+                allowInitialValueMutation=true
+                content=siteSettings.points_type
+                onSelect=(action "selectChange")
+                value=user.custom_fields.yoyow_score_method}}
+      <div style="margin-left: 10px;">
+        {{input class="yoyow_score_amount" type="text" value=user.custom_fields.yoyow_score_amount}}
+        <span class="score-amount-tip ratio">%</span>
+      </div>
+    </div>
+    <p class="tips">
+      <span class="score-amount-tip fixed">
+        {{i18n 'yoyo_settings.fixed_tips'}}
+      </span>
+      <span class="score-amount-tip ratio">
+        {{i18n 'yoyo_settings.ratio_tips'}}
+      </span>
+    </p>
+  </li>
+  <li>
+    <label>{{i18n 'yoyo_settings.points_limit'}}</label>
+    {{input type="text" labelKey="retort.preferences.key" value=user.custom_fields.yoyow_score_max_csaf}}
+  </li>
+</ul>
+{{!-- {{/if}} --}}

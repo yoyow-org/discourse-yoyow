@@ -1,0 +1,241 @@
+// .topic-post .topic-body { z-index: 3; }
+@import url('//at.alicdn.com/t/font_1520292_ke59tdk3l.css');
+
+.post-retort {
+  background: dark-light-diff($primary, $secondary, 25%, -25%);
+  float: left;
+  padding: 2px;
+  z-index: 1;
+  margin: 20px 2px;
+  border-radius: 5px;
+  position: relative;
+  outline: 0;
+
+  &:hover .post-retort__tooltip { opacity: 1 }
+
+  &__tooltip {
+    opacity: 0;
+    transition: .5s opacity;
+    position: absolute;
+    bottom: 30px;
+    font-size: 12px;
+    text-align: center;
+    min-width: 125px;
+    max-width: 150px;
+    background: $primary;
+    color: $secondary;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    word-wrap: normal;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+    pointer-events: none;
+    word-break: break-word;
+    &:after {
+      content: ' ';
+      width: 7px;
+      height: 7px;
+      bottom: -5px;
+      left: 50%;
+      transform: rotate(45deg) translate(-50%, 0);
+      position: absolute;
+      background: $primary;
+    }
+  }
+
+  &__count {
+    font-size: 12px;
+    padding: 1px;
+    position: relative;
+    bottom: 3px;
+    left: 1px;
+    font-weight: bold;
+    color: $secondary;
+  }
+}
+
+.retort__emoji-picker-wrapper {
+  &--limited .emoji-picker {
+    height: auto !important;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    button.emoji {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-size: 40px;
+      margin: 0;
+      padding: 10px 0;
+    }
+  }
+
+  &--active {
+    // background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+
+    > .ember-view {
+      width: 400px;
+      height: max-content;
+      box-sizing: border-box;
+      background: rgba(255,255,255,1);
+      box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);
+      list-style: none;
+      border-radius: px;
+    }
+
+    > .ember-view:after {
+      position: absolute;
+      left: 50%;
+      margin-left: -10px;
+      bottom: -6px;
+      width: 0;
+      height: 0px;
+      border: 10px solid transparent;
+      border-color: #fff #fff transparent transparent;;
+      transform: rotate(135deg);
+      box-shadow: 4px -4px 4px 0px rgba(0,0,0,0.05);
+      z-index: 10;
+      content: '';
+    }
+
+    .emoji-picker {
+      bottom: auto !important;
+      position: relative !important;
+      border: 0 none;
+      border-radius: 5px;
+    }
+  }
+}
+
+.post-retort {
+  background: transparent;
+  border: 1px solid #ddd;
+}
+
+.post-retort__count {
+  color: #666;
+}
+// activity 中页面 start
+.yoyo-list{
+  table {
+    width: 100%;
+    td {
+      padding: 15px 0.5em;
+      color: #919191;
+    }
+    th {
+      white-space: nowrap;
+    }
+    .explorer_url {
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+  .pagination {
+    margin-top: 20px;
+    float: right;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    color: #919191;
+    font-size: 16px;
+    li {
+      padding: 3px 10px;
+      cursor: pointer;
+    }
+    li:hover {
+      color: skyblue;
+    }
+    .prev {
+
+    }
+  }
+}
+// activity 中页面 end
+
+// yoyo settings start
+.yoyo-settings {
+  margin: 0;
+  list-style: none;
+  .a_tip {
+    height: max-content;
+    margin-left: 6px;
+    color: #aaa;
+    display: block;
+    i {
+      display: block;
+      font-size: 14px;
+    }
+  }
+  li {
+    margin-bottom: 20px;
+  }
+  .flex-box {
+    display: flex;
+    align-items: center;
+    input {
+      margin-top: 0px;
+    }
+    label {
+      margin-bottom: 0px;
+    }
+  }
+  label {
+    margin-bottom: 10px;
+  }
+  span {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .tips {
+    color: #919191;
+    margin-bottom: 10px;
+    font-size: .8706em;
+    margin-top: 5px;
+  }
+}
+// yoyo settings end
+
+@media screen and (max-width: 750px) {
+  .retort__emoji-picker-wrapper {
+    &--limited .emoji-picker {
+      button.emoji {
+        width: 25px;
+        height: 25px;
+        background-size: 25px;
+        padding: 5px 0;
+      }
+    }
+
+    &--active {
+      > .ember-view {
+        width: 200px;
+      }
+      .emoji-picker {
+        bottom: auto !important;
+        position: relative !important;
+        border: 0 none;
+        border-radius: 5px;
+        width: 200px !important;
+      }
+    }
+  }
+  .topic-post nav.post-controls .actions {
+    float: right;
+  }
+  .post-retort {
+    margin: 4px 2px;
+  }
+}

@@ -1,0 +1,21 @@
+zh_CN:
+  site_settings:
+    yoyow_enabled: "启用YOYOW 评价插件."
+    yoyow_retort_limited_emoji_set: "仅限使用以下指定的表情评价列表"
+    yoyow_retort_allowed_emojis: "列出允许的表情符号，并以 “|” 字符隔开"
+    yoyow_retort_emojis_per_row: "选择每行显示多少个自定义表情符号（不填写默认它们全部显示在一行中）" #TODO 这个好像没有用，应该已经被修改了
+    yoyow_retort_allow_multiple_reactions: "允许用户对同一帖子多次评价"
+    yoyow_retort_disabled_categories: "列出要禁用的文章类别，以“|” 字符隔开"
+    yoyow_retort_max_per_day: "每位用户每天最多可以评价的次数"
+    yoyow_retort_tl2_max_per_day_multiplier: "信任等级2的用户每天评价次数增加至倍数"
+    yoyow_retort_tl3_max_per_day_multiplier: "信任等级3的用户每天评价次数增加至倍数"
+    yoyow_retort_tl4_max_per_day_multiplier: "信任等级4的用户每天评价次数增加至倍数"
+    yoyow_platform_id: "YOYOW 平台 ID"
+    yoyow_platform_license_lid: "文章上链使用的License ID"
+    yoyow_middleware_sec_key: "YOYOW 中间件加密密钥"
+    yoyow_middlware_api_url: "YOYOW 中间件地址"
+    yoyow_score_smile_percent: "微笑表情(yo_smile)对应消耗当前积分数量的百分比"
+    yoyow_score_grin_percent: "露齿笑表情(yo_grin)对应消耗当前积分数量的百分比"
+    yoyow_score_laugh_percent: "大笑表情(yo_laugh)对应消耗当前积分数量的百分比"
+    yoyow_max_score_csaf_once: "单次评价消耗积分上限"
+    yoyow_content_url_domain_on_chain: "内容在YOYOW链上的链接前缀（网站域名）"
